@@ -1,0 +1,376 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+img {
+    width: 100%;
+    border: 0px;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    cursor: pointer;
+}
+
+a:link {
+    text-decoration: none;
+    color: #000000;
+}
+
+a:visited {
+    text-decoration: none;
+    color: #000000;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #000000;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* 전역속성 끝 */
+
+/* 헤더 시작 */
+header {
+    background: #333333;
+    width: 100%;
+    height: 40px;
+    margin: auto;
+}
+
+.box1200 {
+    width: 1200px;
+    height: 100%;
+    margin: auto;
+}
+
+
+.logobox__header {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.logobox__header.left {
+    float: left;
+}
+
+.logobox__header.right {
+    float: right;
+}
+
+.logobox__header .inner__header {
+    display: flex;
+    align-items: center;
+}
+
+.inner__header li {
+    line-height: 100%;
+}
+
+.inner__header li a {
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 400;
+    padding: 0 10px;
+}
+
+.inner__header li:nth-child(4) i {
+    font-size: 15px;
+}
+
+.inner__header li:nth-child(4) i:nth-child(2) {
+    font-size: 15px;
+    margin-left: -3px;
+    color: rgb(255, 167, 167);
+}
+
+.searchbox input {
+    background: transparent;
+    border: 1px solid #ffffff;
+    position: relative;
+}
+
+.searchbox {
+    position: relative;
+}
+
+.searchbox:after {
+    display: block;
+    position: absolute;
+    left: 165px;
+    top: 3px;
+    content: '\f002';
+    font-size: 12px;
+    font-weight: 900;
+    color: #ffffff;
+    width: 100%;
+    height: 100%;
+    font-family: "Font Awesome 5 Free";
+}
+
+.inner__header span {
+    border-right: 2px solid #818181;
+    font-size: 3px;
+    display: inline;
+    padding-left: 20px;
+}
+
+/* 헤더 끝 */
+
+/* GNB 시작 */
+.gnb {
+    width: 100%;
+    height: 60px;
+    border-bottom: 1px solid #d4d4d4;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 99;
+}
+
+.gnb .box1200 {
+    position: relative;
+}
+
+.gnb .left {
+    float: left;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.gnb .right {
+    float: right;
+    height: 100%;
+}
+
+.gnb .right>ul {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.gnb .right>ul>li>a {
+    font-size: 12px;
+    font-weight: 400;
+    margin: 12px;
+    padding: 0 0 5px 0;
+}
+
+
+.gnb .right>ul>li>a:hover {
+    border-bottom: 1px solid #000000;
+}
+
+.gnb .right>ul>li:nth-child(12) a {
+    margin: 12px 22px;
+    font-weight: 600;
+}
+
+.gnb .right>ul>li:nth-child(13) a:hover {
+    border: 0px;
+}
+
+.gnb .right i {
+    font-size: 20px;
+    padding: 0px;
+    margin-left: 100px;
+}
+
+.gnb .right span {
+    border-right: 2px solid #dddddd;
+    font-size: 3px;
+    display: inline;
+    margin-left: 10px;
+}
+
+/* 네비기초 완료 */
+
+/* 네비 히든 클래스 설정 */
+
+
+.gnb .right>ul>li>ul {
+    display: flex;
+    position: absolute;
+    top: 60px;
+    left: 0px;
+    width: 100%;
+    margin: auto;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.6s;
+
+}
+
+.gnb .right>ul>li>ul>li {
+    width: 14.25%;
+}
+
+.gnb .right>ul>li>ul>li:nth-child(n+2) {
+    border-left: 1px solid #dddddd;
+}
+
+.gnb .right>ul>li:hover>ul {
+    visibility: visible;
+    opacity: 1;
+    transition: 0.3s;
+    background: rgba(230, 230, 230, 0.95);
+    width: 100%;
+    height: auto;
+}
+
+.gnb .right>ul>li>ul {
+    padding: 20px 0;
+}
+
+.gnb .right>ul>li>ul>li>a {
+    color: #333333;
+    font-size: 12px;
+    font-weight: 600;
+    height: auto;
+    display: block;
+    padding-left: 20px;
+    margin: 13px 12px;
+}
+
+.gnb .right>ul>li>ul>li>a:nth-child(n+2) {
+    color: #333333;
+    font-size: 12px;
+    font-weight: 400;
+    height: auto;
+    display: block;
+}
+
+.gnb .right>ul>li>ul>li>a:first-child {
+    padding-bottom: 15px;
+}
+
+.gnb .right>ul>li>ul>li>a:hover {
+    text-decoration: underline;
+}
+
+/* 메인 이미지 */
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.main--col .slides_visual {
+    overflow: hidden;
+    position: relative;
+    width: 778px;
+    height: 700px;
+}
+
+/* 슬라이드 플러그인 */
+/* .main--col .slides_visual .slides_container {
+    width: 778px;
+}
+
+.main--col .slides_visual .slides_container img {
+    width: 778px;
+    height: 700px;
+} */
+
+.main--col .slides_visual .pagination {
+    position: absolute;
+    left: 40px;
+    bottom: 40px;
+    z-index: 10;
+}
+
+.main--col .slides_visual .pagination li {
+    float: left;
+    height: 8px;
+    margin-right: 5px;
+    text-align: center;
+}
+
+.main--col .slides_visual .pagination li a {
+    display: block;
+    overflow: hidden;
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    background: url('../images/pagination.png') no-repeat center;
+    font-size: 0;
+    transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -ms-transition: all 0.4s;
+}
+
+.main--col .slides_visual .pagination li.activeSlide a {
+    width: 18px;
+    background-image: url('../images/pagination_on.png');
+}
+
+.bnr_margin .col100{
+    margin: 30px 0;
+}
+
+/* top 바 만들기 */
+.top {
+    display:none;
+    
+}
+.top > p{
+    display: flex;
+    width: 48px;
+    height: 48px;
+    border: 1px solid #c4c4c4;
+    color: #333333;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    position: fixed;
+    right:14%;
+    bottom: 60px;
+    cursor: pointer;
+}
+
+/* footer시작 */
+
+.footer--section > ul {
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid #c4c4c4;
+    padding-top: 40px;
+    margin-top: 40px;
+}
+
+.footer--section > ul > li > a {
+    padding: 5px 8px ;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.footer--section  > p{
+    padding: 40px 0;
+    font-size: 11px;
+    font-weight: 400;
+    color: #444444;
+    width: 60%;
+    margin: auto;
+    letter-spacing: 1px;
+    word-break: break-all;
+    line-height: 18px;
+    text-align: center;
+}
